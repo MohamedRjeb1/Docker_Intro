@@ -24,12 +24,12 @@ const app = express();
 app.get('/', (req, res) => {
 
     redisClient.set("products","Anta,nike,adidas")
-    res.send('<h1>mohamed  conversation </h1>');});
+    res.send('<h1>Docker Intro </h1>');});
 
 app.get('/', async(req, res) => {
 
     const products = await redisClient.get('products');
-    res.send(`<h1>mohamed  conversation </h1><h2>${products}</h2>`);});
+    res.send(`<h1>Docker Intro </h1><h2>${products}</h2>`);});
 
 app.listen(PORT, () => console.log(`app is up and running on port : ${PORT}`))
 
